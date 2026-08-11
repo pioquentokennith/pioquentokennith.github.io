@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Kennith Albo Pioquento — student, developer, and entrepreneur behind KENSCENT.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Kennith Albo Pioquento | Portfolio</title>
+  <link rel="icon" type="image/png" href="./Assets/Logo/logoicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/projects.js"></script>
+  <script defer src="js/activities.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Kennith home">KENNITH<span>.</span></a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <div class="nav-links" id="navLinks">
+          <a class="nav-link active" href="#home" aria-current="location">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#business">Business</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#activities">Activities</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+        </div>
+
+        <div class="theme-control" aria-label="Appearance">
+          <span class="theme-label">Theme</span>
+          <div class="theme-options" role="group" aria-label="Choose appearance">
+            <button class="theme-option" type="button" data-theme-choice="light" aria-label="Light theme" title="Light"><span aria-hidden="true">☀</span><b>Light</b></button>
+            <button class="theme-option" type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark"><span aria-hidden="true">☾</span><b>Dark</b></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar"></span>
+    </div>
+  </header>
+
+  <main id="mainContent" tabindex="-1">
+    <section class="hero section" id="home" aria-labelledby="home-title">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-greeting">Hello, I'm</p>
+          <h1 id="home-title"><span class="hero-name-main">KENNITH ALBO</span><span class="hero-name-accent">PIOQUENTO</span></h1>
+          <p class="hero-role">Student <i>•</i> Developer <i>•</i> Entrepreneur</p>
+          <p class="hero-description">I build digital experiences and transform ideas into meaningful projects.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore My Work <span class="btn-arrow">→</span></a>
+            <a class="btn btn-secondary" href="#contact">Contact Me <svg class="button-user-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"></circle><path d="M5.75 19c.55-3.3 2.65-5.25 6.25-5.25s5.7 1.95 6.25 5.25"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="portraitTilt">
+          <div class="portrait-stage">
+            <span class="code-symbol code-left">&lt;/&gt;</span>
+            <span class="code-symbol code-right">{ }</span>
+            <span class="code-symbol code-dot dot-a">+</span>
+            <span class="code-symbol code-dot dot-b">•</span>
+            <span class="code-symbol code-dot dot-c">+</span>
+            <span class="binary binary-a">01<br>10<br>01</span>
+            <div class="portrait-ring ring-outer"></div>
+            <div class="portrait-ring ring-inner"></div>
+            <div class="portrait-wrap">
+              <img src="Assets/profile/Profile Picture.png" alt="Portrait of Kennith Albo Pioquento">
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About">
+        <span>Scroll to explore</span>
+        <b>⌄</b>
+      </a>
+    </section>
+
+    <section class="section section-soft" id="about" aria-labelledby="about-title" data-morph-section>
+      <div class="container">
+        <div class="section-heading" data-morph="heading">
+          <span class="section-morph-accent" data-morph="accent" aria-hidden="true"></span>
+          <p class="eyebrow">About Me</p>
+          <h2 id="about-title">Who Am I?</h2>
+          <p>I am a 3rd-year BSCS student and entrepreneur with a strong interest in technology, innovation, and business.</p>
+        </div>
+
+        <div class="about-layout">
+          <article class="about-profile card" data-morph="content">
+            <div class="about-photo">
+              <img src="Assets/profile/profile2.png" alt="Kennith seated in formal attire" loading="lazy">
+            </div>
+            <div class="about-copy">
+              <h3>Kennith Albo Pioquento</h3>
+              <p>I enjoy creating practical digital solutions, improving my technical skills, and exploring opportunities where technology and entrepreneurship can work together.</p>
+              <div class="about-meta">
+                <span>BSCS • 3rd Year</span>
+                <span>Tangub City Global College</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="identity-grid">
+            <article class="mini-card card" data-morph="card" style="--morph-delay: 40ms">
+              <div class="mini-icon">🎓</div>
+              <h3>Student</h3>
+              <p>Learning continuously and developing my technical and creative skills.</p>
+            </article>
+            <article class="mini-card card" data-morph="card" style="--morph-delay: 80ms">
+              <div class="mini-icon">⌨</div>
+              <h3>Developer</h3>
+              <p>Creating web, mobile, and software applications that solve practical problems.</p>
+            </article>
+            <article class="mini-card card" data-morph="card" style="--morph-delay: 120ms">
+              <div class="mini-icon">✦</div>
+              <h3>Entrepreneur</h3>
+              <p>Building KENSCENT while learning branding, operations, and customer experience.</p>
+            </article>
+            <article class="mini-card card" data-morph="card" style="--morph-delay: 120ms">
+              <div class="mini-icon">↗</div>
+              <h3>Future Goals</h3>
+              <p>Use technology to build innovative, useful, and sustainable businesses.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="skills-block" data-morph="content" style="--morph-delay: 120ms">
+          <div class="skills-title-row">
+            <div>
+              <p class="eyebrow">Skills &amp; Technologies</p>
+              <h3>Tools I work with</h3>
+            </div>
+            <p>Problem-solving • Communication • Business planning • Leadership</p>
+          </div>
+          <div class="skill-grid" aria-label="Technology skills">
+            <div class="skill-chip" style="--skill-color: #e44d26"><img src="Assets/Logo/html1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>HTML</strong></div>
+            <div class="skill-chip" style="--skill-color: #1572b6"><img src="Assets/Logo/css1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>CSS</strong></div>
+            <div class="skill-chip" style="--skill-color: #f7df1e"><img src="Assets/Logo/javascript1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>JavaScript</strong></div>
+            <div class="skill-chip" style="--skill-color: #54c5f8"><img src="Assets/Logo/flutter1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>Flutter</strong></div>
+            <div class="skill-chip" style="--skill-color: #f05032"><img src="Assets/Logo/git1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>Git</strong></div>
+            <div class="skill-chip" style="--skill-color: #6e5494"><img src="Assets/Logo/github1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>GitHub</strong></div>
+            <div class="skill-chip" style="--skill-color: #ffca28"><img src="Assets/Logo/firebase1.jpg" alt="" aria-hidden="true" loading="lazy"><strong>Firebase</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section business-section" id="business" aria-labelledby="business-title" data-morph-section>
+      <div class="container">
+        <div class="business-feature card-gold">
+          <div class="business-copy" data-morph="content">
+            <div class="business-brand-row">
+              <img src="Assets/Logo/LOGO.png" alt="KENSCENT logo" class="business-logo" loading="lazy">
+              <div>
+                <p class="eyebrow gold">My Business</p>
+                <span class="business-name">KENSCENT</span>
+              </div>
+            </div>
+            <h2 id="business-title">Perfume that <span>defines you.</span></h2>
+            <p>Find your signature scent with premium-inspired fragrances made for everyday moments, special occasions, and thoughtful gifts.</p>
+            <div class="business-points">
+              <span>60 mL</span><span>Long-lasting</span><span>₱220 each</span>
+            </div>
+            <button class="btn btn-gold" id="viewAllProducts" type="button">Browse Collection <span class="btn-arrow">→</span></button>
+          </div>
+          <div class="business-visual" data-morph="card" style="--morph-delay: 60ms">
+            <div class="gold-glow"></div>
+            <div class="business-poster-slides" role="button" tabindex="0" aria-label="Show back of KENSCENT poster">
+              <img class="active" src="Assets/Perfume Photo Poster/Front Design (1).png" alt="Front of the KENSCENT perfume collection poster" data-business-poster-image="front" loading="lazy">
+              <img src="Assets/Perfume Photo Poster/Back Design (1).png" alt="Back of the KENSCENT perfume collection poster" data-business-poster-image="back" loading="lazy">
+            </div>
+            <div class="poster-indicators" aria-hidden="true">
+              <span class="active" data-poster-indicator="front"></span>
+              <span data-poster-indicator="back"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-toolbar reveal reveal-up">
+          <div>
+            <p class="eyebrow gold">Signature Scents</p>
+            <h3>Explore the collection</h3>
+          </div>
+          <div class="filter-pills" id="productFilters" aria-label="Filter perfume products">
+            <button class="filter-pill active" type="button" data-product-filter="all">All</button>
+            <button class="filter-pill" type="button" data-product-filter="him">For Him</button>
+            <button class="filter-pill" type="button" data-product-filter="her">For Her</button>
+            <button class="filter-pill" type="button" data-product-filter="unisex">Unisex</button>
+          </div>
+        </div>
+        <p class="results-status" id="productResults" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services" aria-labelledby="services-title" data-morph-section>
+      <div class="container">
+        <div class="section-heading split-heading" data-morph="heading">
+          <div>
+            <p class="eyebrow">What I Build</p>
+            <h2 id="services-title">Turning ideas into <span>powerful solutions.</span></h2>
+          </div>
+          <p>I create modern, responsive, and user-friendly applications for web and mobile platforms.</p>
+        </div>
+
+        <div class="service-grid">
+          <button class="service-card card project-trigger" type="button" data-project-filter="web" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 40ms">
+            <div class="service-icon">◎</div>
+            <p class="eyebrow">Web Applications</p>
+            <h3>Responsive web experiences</h3>
+            <p>Websites and browser-based systems designed to work smoothly across desktop and mobile screens.</p>
+            <span class="text-button">View Projects <span>→</span></span>
+          </button>
+          <button class="service-card card project-trigger" type="button" data-project-filter="mobile" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 80ms">
+            <div class="service-icon">▯</div>
+            <p class="eyebrow">Mobile Applications</p>
+            <h3>Usable mobile interfaces</h3>
+            <p>Mobile-first application concepts focused on clear interactions, responsive layouts, and practical workflows.</p>
+            <span class="text-button">View Projects <span>→</span></span>
+          </button>
+          <button class="service-card card project-trigger" type="button" data-project-filter="systems" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 120ms">
+            <div class="service-icon">▱</div>
+            <p class="eyebrow">Projects &amp; Systems</p>
+            <h3>Academic and business solutions</h3>
+            <p>Personal, school, and entrepreneurial systems created to solve problems and strengthen my development skills.</p>
+            <span class="text-button">View Projects <span>→</span></span>
+          </button>
+        </div>
+
+        <div class="tech-stack" data-morph="content" style="--morph-delay: 120ms">
+          <span>Tech Stack</span>
+          <div class="tech-list">
+            <b>HTML</b><b>CSS</b><b>JavaScript</b><b>Flutter</b><b>Java</b><b>Git</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="activities" aria-labelledby="activities-title" data-morph-section>
+      <div class="container">
+        <div class="section-heading split-heading" data-morph="heading">
+          <div>
+            <p class="eyebrow">Academic Activities</p>
+            <h2 id="activities-title">Learning by <span>building.</span></h2>
+          </div>
+          <p>Academic exercises and assignments will be shared here once they are provided.</p>
+        </div>
+
+        <div class="activity-panel card is-empty" data-morph="content">
+          <div class="activity-controls">
+            <div class="filter-pills activity-filters" id="activityFilters" aria-label="Filter academic activities">
+              <button class="filter-pill active" type="button" data-activity-filter="all" aria-controls="activityList" aria-pressed="true">All</button>
+              <button class="filter-pill" type="button" data-activity-filter="midterm" aria-controls="activityList" aria-pressed="false">Midterm</button>
+              <button class="filter-pill" type="button" data-activity-filter="finalterm" aria-controls="activityList" aria-pressed="false">Finalterm</button>
+            </div>
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="activitySearch" type="search" placeholder="Search activities..." autocomplete="off" aria-label="Search activities">
+            </label>
+          </div>
+          <div class="activity-list" id="activityList"></div>
+          <div class="activity-empty" id="activityEmpty" role="status" aria-live="polite">
+            <strong id="activityEmptyTitle">Soon To Be Announced</strong>
+            <p id="activityEmptyDescription">Academic activities will appear here when they are available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft contact-section" id="contact" aria-labelledby="contact-title" data-morph-section>
+      <div class="container">
+        <div class="section-heading centered" data-morph="heading">
+          <span class="section-morph-accent" data-morph="accent" aria-hidden="true"></span>
+          <p class="eyebrow">Let's Connect</p>
+          <h2 id="contact-title">Have something in mind?</h2>
+          <p>Whether it's about a project, collaboration, business inquiry, or opportunity, feel free to reach out.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card card" data-morph="card" style="--morph-delay: 40ms">
+            <div class="contact-icon mail" aria-hidden="true">✉</div>
+            <h3>Gmail</h3>
+            <p>pioquentokennith@gmail.com</p>
+            <div class="contact-actions">
+              <a class="btn btn-small btn-primary" href="mailto:pioquentokennith@gmail.com">Email Me</a>
+              <button class="copy-button" type="button" data-copy="pioquentokennith@gmail.com" data-copy-name="Email" aria-label="Copy email address"><span>Copy</span><b aria-hidden="true">✓</b></button>
+            </div>
+          </article>
+          <article class="contact-card card" data-morph="card" style="--morph-delay: 80ms">
+            <div class="contact-icon phone" aria-hidden="true">☎</div>
+            <h3>Phone</h3>
+            <p>0964 133 4715</p>
+            <div class="contact-actions">
+              <a class="btn btn-small btn-primary" href="tel:+639641334715">Call Me</a>
+              <button class="copy-button" type="button" data-copy="0964 133 4715" data-copy-name="Phone number" aria-label="Copy phone number"><span>Copy</span><b aria-hidden="true">✓</b></button>
+            </div>
+          </article>
+          <article class="contact-card card" data-morph="card" style="--morph-delay: 120ms">
+            <div class="contact-icon facebook" aria-hidden="true">f</div>
+            <h3>Facebook</h3>
+            <p>Kennith Albo Pioquento</p>
+            <a class="btn btn-small btn-primary" href="https://www.facebook.com/kenzo.ozamiz/" target="_blank" rel="noopener noreferrer">Visit Profile<span class="sr-only"> (opens in a new tab)</span></a>
+          </article>
+        </div>
+
+        <div class="contact-note card" data-morph="content" style="--morph-delay: 120ms">
+          <div>
+            <span class="paper-plane" aria-hidden="true">➤</span>
+          </div>
+          <p>I'm always open to new opportunities, useful collaborations, and ideas worth building.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Kennith Albo Pioquento. Frontend-only portfolio.</p>
+      <p>Made with <span class="heart">♥</span> by <strong>Kennith</strong></p>
+    </div>
+  </footer>
+
+  <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <div class="modal-backdrop" data-close-modal="productModal"></div>
+    <div class="modal-dialog product-modal-dialog" role="document">
+      <button class="modal-close" type="button" data-close-modal="productModal" aria-label="Close product details">×</button>
+      <h2 class="sr-only" id="productModalTitle">Product details</h2>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <div class="modal-backdrop" data-close-modal="projectModal"></div>
+    <div class="modal-dialog modal-wide" role="document">
+      <button class="modal-close" type="button" data-close-modal="projectModal" aria-label="Close projects">×</button>
+      <div class="modal-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="projectModalTitle">Projects</h2>
+      </div>
+      <div class="project-modal-tabs" role="tablist" aria-label="Project categories">
+        <button type="button" role="tab" data-project-tab="web" aria-controls="projectModalGrid" aria-selected="true">Web</button>
+        <button type="button" role="tab" data-project-tab="mobile" aria-controls="projectModalGrid" aria-selected="false">Mobile</button>
+        <button type="button" role="tab" data-project-tab="systems" aria-controls="projectModalGrid" aria-selected="false">Systems</button>
+      </div>
+      <div class="modal-project-grid" id="projectModalGrid" role="tabpanel" tabindex="0"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="activityModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="activityModalTitle">
+    <div class="modal-backdrop" data-close-modal="activityModal"></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" type="button" data-close-modal="activityModal" aria-label="Close activity details">×</button>
+      <h2 class="sr-only" id="activityModalTitle">Activity details</h2>
+      <div id="activityModalContent"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

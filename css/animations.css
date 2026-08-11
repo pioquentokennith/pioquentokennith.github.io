@@ -1,0 +1,104 @@
+@keyframes productFilterIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes activityResultIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes projectResultIn {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ringEnter {
+  from { opacity: 0; transform: scale(.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes blueprintDraw {
+  from { opacity: 0; transform: scaleX(0); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+[data-morph-section] [data-morph] {
+  opacity: 0;
+  transition:
+    opacity var(--morph-item-duration) ease,
+    transform var(--morph-duration) var(--morph-ease),
+    clip-path var(--morph-duration) var(--morph-ease);
+  transition-delay: var(--morph-delay, 0ms);
+}
+
+[data-morph="heading"] {
+  transform: translateY(var(--morph-distance));
+  clip-path: inset(0 0 100% 0);
+}
+
+[data-morph="content"] {
+  transform: translateY(var(--morph-distance)) scale(.985);
+}
+
+[data-morph="card"] {
+  transform: translateY(14px) scale(.97);
+}
+
+[data-morph="accent"] {
+  transform: scaleX(.1);
+  clip-path: none;
+}
+
+#business:not(.is-morph-visible) .business-copy[data-morph="content"] {
+  transform: translateX(calc(var(--morph-distance) * -1));
+}
+
+#business:not(.is-morph-visible) .business-visual[data-morph="card"] {
+  transform: scale(.98);
+}
+
+#services:not(.is-morph-visible) .service-card:first-child {
+  transform: translateX(14px) translateY(10px) scale(.97);
+}
+
+#services:not(.is-morph-visible) .service-card:nth-child(2) {
+  transform: translateY(10px) scale(.97);
+}
+
+#services:not(.is-morph-visible) .service-card:nth-child(3) {
+  transform: translateX(-14px) translateY(10px) scale(.97);
+}
+
+#activities:not(.is-morph-visible) .activity-panel[data-morph="content"] {
+  transform: translateY(10px);
+  clip-path: inset(0 0 100% 0 round 18px);
+}
+
+[data-morph-section].is-morph-visible [data-morph] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  clip-path: inset(0);
+}
+
+[data-morph-section].is-morph-visible [data-morph="accent"] {
+  transform: scaleX(1);
+  clip-path: none;
+}
+
+#activities.is-morph-visible .activity-panel[data-morph="content"] {
+  clip-path: inset(0 round 18px);
+}
+
+.reveal { opacity: 0; transition: opacity var(--duration-enter) var(--ease-out), transform var(--duration-enter) var(--ease-out); transition-delay: var(--delay, 0ms); }
+.reveal-up { transform: translateY(14px); }
+.reveal-left { transform: translateX(-14px); }
+.reveal-scale { transform: scale(.96); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .hero.is-portrait-hovered .portrait-wrap, .hero.is-portrait-hovered .code-symbol, .hero.is-portrait-hovered .binary { transform: none !important; }
+  .hero.is-connected .hero-description::after { width: 0 !important; }
+  .hero-visual::after { left: 50% !important; top: 50% !important; }
+  [data-morph-section] [data-morph] { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
+  #business::before { clip-path: none !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation-duration: .01ms !important; }
+}
