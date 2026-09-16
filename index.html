@@ -15,6 +15,7 @@
   <script defer src="js/projects.js"></script>
   <script defer src="js/activities.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/dropdown.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -28,13 +29,36 @@
       </button>
 
       <div class="nav-panel" id="navPanel">
-        <div class="nav-links" id="navLinks">
-          <a class="nav-link active" href="#home" aria-current="location">Home</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#business">Business</a>
-          <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#activities">Activities</a>
-          <a class="nav-link" href="#contact">Contact</a>
+        <div class="nav-links-wrap">
+          <ul class="nav-links" id="navLinks">
+            <li><a class="nav-link active" href="#home" aria-current="location">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#business">Business</a></li>
+
+            <li class="dropdown">
+              <button class="nav-link dropdown-toggle" id="servicesDropdownBtn" type="button" data-nav-target="#services" aria-haspopup="true" aria-expanded="false" aria-controls="servicesDropdownMenu">
+                Services <span class="dropdown-arrow" data-dropdown-arrow aria-hidden="true">&#9660;</span>
+              </button>
+              <ul class="dropdown-menu" id="servicesDropdownMenu" aria-labelledby="servicesDropdownBtn">
+                <li><a href="#service-web" data-service-target="web">Web Development</a></li>
+                <li><a href="#service-mobile" data-service-target="mobile">Mobile Development</a></li>
+                <li><a href="#service-systems" data-service-target="systems">Projects &amp; Systems</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <button class="nav-link dropdown-toggle" id="activitiesDropdownBtn" type="button" data-nav-target="#activities" aria-haspopup="true" aria-expanded="false" aria-controls="activitiesDropdownMenu">
+                Activities <span class="dropdown-arrow" data-dropdown-arrow aria-hidden="true">&#9660;</span>
+              </button>
+              <ul class="dropdown-menu" id="activitiesDropdownMenu" aria-labelledby="activitiesDropdownBtn">
+                <li><a href="#activities" data-activity-jump="all">All Activities</a></li>
+                <li><a href="#activities" data-activity-jump="midterm">Midterm</a></li>
+                <li><a href="#activities" data-activity-jump="finalterm">Finalterm</a></li>
+              </ul>
+            </li>
+
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
           <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
         </div>
 
@@ -218,21 +242,21 @@
         </div>
 
         <div class="service-grid">
-          <button class="service-card card project-trigger" type="button" data-project-filter="web" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 40ms">
+          <button class="service-card card project-trigger" id="service-web" type="button" data-project-filter="web" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 40ms">
             <div class="service-icon">◎</div>
             <p class="eyebrow">Web Applications</p>
             <h3>Responsive web experiences</h3>
             <p>Websites and browser-based systems designed to work smoothly across desktop and mobile screens.</p>
             <span class="text-button">View Projects <span>→</span></span>
           </button>
-          <button class="service-card card project-trigger" type="button" data-project-filter="mobile" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 80ms">
+          <button class="service-card card project-trigger" id="service-mobile" type="button" data-project-filter="mobile" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 80ms">
             <div class="service-icon">▯</div>
             <p class="eyebrow">Mobile Applications</p>
             <h3>Usable mobile interfaces</h3>
             <p>Mobile-first application concepts focused on clear interactions, responsive layouts, and practical workflows.</p>
             <span class="text-button">View Projects <span>→</span></span>
           </button>
-          <button class="service-card card project-trigger" type="button" data-project-filter="systems" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 120ms">
+          <button class="service-card card project-trigger" id="service-systems" type="button" data-project-filter="systems" data-morph="card" aria-haspopup="dialog" aria-controls="projectModal" style="--morph-delay: 120ms">
             <div class="service-icon">▱</div>
             <p class="eyebrow">Projects &amp; Systems</p>
             <h3>Academic and business solutions</h3>

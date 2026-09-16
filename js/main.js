@@ -18,8 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeModal = null;
   let scrollFrame = null;
 
+  function navTarget(link) {
+    return link.dataset.navTarget || link.getAttribute('href') || '';
+  }
+
   function setActiveNav(sectionId) {
-    const activeLink = navLinks.find((link) => link.getAttribute('href') === `#${sectionId}`) || navLinks[0];
+    const activeLink = navLinks.find((link) => navTarget(link) === `#${sectionId}`) || navLinks[0];
     navLinks.forEach((link) => {
       const isActive = link === activeLink;
       link.classList.toggle('active', isActive);
@@ -28,8 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (!navIndicator || mobileNav.matches || !activeLink) return;
-    navIndicator.style.width = `${Math.max(activeLink.offsetWidth - 20, 12)}px`;
-    navIndicator.style.transform = `translateX(${activeLink.offsetLeft + 10}px)`;
+    const track = navIndicator.parentElement;
+    if (!track) return;
+    const trackRect = track.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+    if (!linkRect.width) return;
+    navIndicator.style.width = `${Math.max(linkRect.width - 20, 12)}px`;
+    navIndicator.style.transform = `translateX(${linkRect.left - trackRect.left + 10}px)`;
   }
 
   function currentSectionId() {
@@ -89,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
 
-  navLinks.forEach((link) => link.addEventListener('click', () => {
+  navLinks.filter((link) => !link.classList.contains('dropdown-toggle')).forEach((link) => link.addEventListener('click', () => {
     const section = document.querySelector(link.getAttribute('href'));
     closeMenu();
     requestAnimationFrame(() => {
